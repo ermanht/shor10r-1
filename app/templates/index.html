@@ -1,6 +1,7 @@
 <html>
-    <head>
-        <title>SHORT URL</title>
+<head>
+<title>URL SHORTENER</title>
+<meta charset="utf-8">
 <style> 
     body{ 
     background-image:url(https://www.ilmubahasa.net/wp-content/uploads/2018/10/backgroundkeren1-630x380.jpg); 
@@ -8,13 +9,46 @@
     background-attachment: fixed; } 
     p{ color:white; } 
 </style>
+
+<style type="text/css">
+    .a {
+        text-align: center;
+        margin: 50px;
+    }
+    .b {
+        margin: 250px auto;
+        width: 500px;
+        padding: 10px;
+
+    }
+    input[type=text] {
+        margin: 5px auto;
+        width: 100%;
+        padding: 10px;
+    }
+    input[type=submit] {
+        margin 5px auto;
+        float: right;
+        padding: 5px;
+        width: 90px;
+        border: 1px solid #fff;
+        color: #fff;
+        background: red;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-<form method="POST" action="{{ url_for('short.add_link')}}">
+<div class="a">
+    <h2><strong><font color="white">Put your long URL in here ...</font></strong></h2>
+</div>    
+<div class="b">
+    <form method="POST" action="{{ url_for('short.add_link')}}">
 
-    <input type="text" name="original_url">
-    <input type="submit">
+        <input type="text" name="original_url">
+        <input type="submit">
 
-</form>
+    </form>
+</div>
 </body>
 </html>
