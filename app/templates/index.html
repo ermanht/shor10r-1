@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>SHORT URL</title>
+<style> 
+    body{ 
+    background-image:url(https://www.ilmubahasa.net/wp-content/uploads/2018/10/backgroundkeren1-630x380.jpg); 
+    background-size:cover; 
+    background-attachment: fixed; } 
+    p{ color:white; } 
+</style>
+</head>
+<body>
+<form method="POST" action="{{ url_for('short.add_link')}}">
+
+    <input type="text" name="original_url">
+    <input type="submit">
+
+</form>
+</body>
+</html>
